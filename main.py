@@ -19,18 +19,23 @@ try:
     """
     )
 except Exception as e:
-    if e.args[0] != 'table DemoTable already exists':
+    if not 'already exists' in e.args[0]:
         raise e
 
-# # Insert data into our demo table
-# # This commands is idempotent
-my_db.execute(
-  """
-    INSERT INTO DemoTable VALUES (
-      1, "Our first DemoTable record entry"
-    );
-  """
-)
+
+try:
+  # Insert data into our demo table
+  # This commands is NOT idempotent
+  my_db.execute(
+    """
+      INSERT INTO DemoTable VALUES (
+        1, "Our first DemoTable record entry"
+      );
+    """
+  )
+except Exception as e:
+    if not 'UNIQUE constraint failed' in e.args[0]:
+        raise e
 
 # Fetch the data 
 my_db.execute("SELECT * FROM DemoTable")
