@@ -18,7 +18,7 @@ class PySQLLite(object):
 
     def execute(self, statement):
         result = self.cursor.execute(statement)
-        return result
+
         try:
             result = self.cursor.execute(statement)
             self.conn.commit()
