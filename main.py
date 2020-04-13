@@ -11,17 +11,14 @@ my_db = PySQLLite("database/WSU_AL.db")
 try:
     # Create the table, this command is NOT idempotent
     # https://www.w3schools.com/sql/sql_datatypes.asp
-    my_db.execute(
-    """CREATE TABLE DemoTable (
+    my_db.execute("""CREATE TABLE DemoTable (
         id INTEGER PRIMARY KEY,
         description VARCHAR(5)
         );
-    """
-    )
+    """)
 except Exception as e:
-    if not 'already exists' in e.args[0]:
+    if 'already exists' not in e.args[0]:
         raise e
-
 
 try:
   # Insert data into our demo table
@@ -34,10 +31,10 @@ try:
     """
   )
 except Exception as e:
-    if not 'UNIQUE constraint failed' in e.args[0]:
+    if 'UNIQUE constraint failed' not in e.args[0]:
         raise e
 
-# Fetch the data 
+# Fetch the data
 my_db.execute("SELECT * FROM DemoTable")
 
 # Pretty print the fetched data

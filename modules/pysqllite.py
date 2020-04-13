@@ -3,6 +3,7 @@ Simple python class to interact with SQLlite
 """
 import sqlite3
 
+
 class PySQLLite(object):
 
   def __init__(self, database):
