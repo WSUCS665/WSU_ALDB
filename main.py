@@ -21,15 +21,13 @@ except Exception as e:
         raise e
 
 try:
-  # Insert data into our demo table
-  # This commands is NOT idempotent
-  my_db.execute(
-    """
+    # Insert data into our demo table
+    # This commands is NOT idempotent
+    my_db.execute("""
       INSERT INTO DemoTable VALUES (
         1, "Our first DemoTable record entry"
       );
-    """
-  )
+    """)
 except Exception as e:
     if 'UNIQUE constraint failed' not in e.args[0]:
         raise e
