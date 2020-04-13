@@ -9,5 +9,5 @@ if __name__ == '__main__':
     
     print('\nExecuting Coverage Report\n')
     os.system('coverage report -m --omit=*\\__init__.py')
-    os.system('coverage-badge -o documents\\coverage.svg')
+    os.system(f"coverage-badge -o {os.path.join('documents', 'coverage.svg')} -f")
     os.system('coverage erase')
