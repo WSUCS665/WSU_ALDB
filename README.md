@@ -6,28 +6,25 @@ WSU Applied Learning Database
 
 * This repository represents the Wichita State University Applied Learning database
 * This repository is front-ended by [Repl.it](https://WSUALDB.wsucs665.repl.run)
-* This repository supported by a serverless CICD build process 
+* This repository supported by a serverless CICD build processes
 * Flake8 linting, unittests, and coverage are enforced for quality.
 * Compatible with Python 3.6.x, Windows, Linux, Mac
 
 
-Goals:
-* What companies are interested in hiring WSU students and what skills are in demand?
-* Which students have in-demand skills and are near the business?
-* o	What positions, and skills, do we need to train backfill to prepare for student graduation?
-
-
-## Documentation
-The Entity Relationship Diagram and details for this repository are as follows.
-![](./documents/ER_Diagram.png)
-![](./documents/CS665_Project_Phase_I.html)
-
-
-
 ## CONTENTS
+* [Documentation](#documentation)
 * [ToDo](#todo)
+* [Goals](#goals)
 * [Instructions](#instructions)
 * [Troubleshooting](#troubleshooting)
+
+## Documentation
+```javascript
+The Entity Relationship Diagram and details for this repository are as follows.
+```
+![](./documents/ER_Diagram.png)
+![](./documents/Detailed_Description.png)
+![](./documents/Relational_Schemas.png)
 
 
 ## ToDo
@@ -37,9 +34,18 @@ The Entity Relationship Diagram and details for this repository are as follows.
 * Design an implementation for the CS665 project
 ```
 
+
+## Goals
+```javascript
+* What companies are interested in hiring WSU students and what skills are in demand?
+* Which students have in-demand skills and are near the business?
+* What positions, and skills, do we need to train backfill to prepare for student graduation?
+```
+
 ## Instructions
 ```javascript
 If you wish to download respository and execute main.py locally please install the following requirements
+
 * Python3
 ```
 
