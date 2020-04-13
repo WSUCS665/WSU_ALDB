@@ -1,4 +1,3 @@
-import sqlite3
 from unittest import TestCase
 from modules.pysqllite import PySQLLite
 
@@ -22,17 +21,17 @@ class TestPySQLLite(TestCase):
         """
         test_db = PySQLLite("database/WSU_AL.db")
         self.assertEqual(test_db.conn.total_changes, 0)
-        
+
         # save + close
         test_db.exit()
 
         with self.assertRaises(Exception) as e:
             test_db.conn.in_transaction
-        
+
         exception_message = e.exception.args[0]
-        
+
         self.assertEqual(
-            exception_message, 
+            exception_message,
             'Cannot operate on a closed database.'
         )
 
@@ -42,7 +41,7 @@ class TestPySQLLite(TestCase):
         will add an entry to a database table
         """
         test_db = PySQLLite("database/WSU_AL.db")
-        
+
         try:
             # Insert data into our demo table
             # This commands is NOT idempotent
@@ -50,8 +49,7 @@ class TestPySQLLite(TestCase):
                 INSERT INTO DemoTable VALUES (
                     1, "Our first DemoTable record entry"
                 );
-                """
-            )
+            """)
         except Exception as e:
             if 'UNIQUE constraint failed' not in e.args[0]:
                 raise e
@@ -60,8 +58,7 @@ class TestPySQLLite(TestCase):
         test_db.execute("""
             SELECT * FROM DemoTable
             WHERE id = 1
-            """
-        )
+        """)
 
         # Pretty print the fetched data
         self.assertEqual(
@@ -80,8 +77,7 @@ class TestPySQLLite(TestCase):
         test_db.execute("""
             SELECT * FROM DemoTable
             WHERE id = 1
-            """
-        )
+        """)
 
         self.assertEqual(
             test_db.fetchall(),
@@ -95,20 +91,18 @@ class TestPySQLLite(TestCase):
         used in a with statement
         """
         test_db = PySQLLite("database/WSU_AL.db")
-        
+
         with test_db:
             # Fetch the data
             test_db.execute("""
                 SELECT * FROM DemoTable
                 WHERE id = 1
-                """
-            )
+            """)
 
             self.assertEqual(
                 test_db.fetchall(),
                 [(1, 'Our first DemoTable record entry')]
             )
-
 
     def test_db_delete_entry(self):
         """
@@ -123,35 +117,31 @@ class TestPySQLLite(TestCase):
             INSERT INTO DemoTable VALUES (
                 2, "Our second DemoTable record entry"
             );
-            """
-        )
+        """)
 
         # query to check the record
         test_db.execute("""
             SELECT * FROM DemoTable
             WHERE id = 2
-            """
-        )
+        """)
 
         # ensur the record exists before we delete it
         self.assertEqual(
             test_db.fetchall(),
             [(2, 'Our second DemoTable record entry')]
         )
-        
+
         # delete the record
         test_db.execute("""
             DELETE FROM DemoTable
             WHERE id = 2
-            """
-        )
-        
+        """)
+
         # query to check the record
         test_db.execute("""
             SELECT * FROM DemoTable
             WHERE id = 2
-            """
-        )
+        """)
 
         # ensure the record does not exist
         self.assertEqual(
