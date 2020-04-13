@@ -1,3 +1,18 @@
+"""
+File: test_pysqllite.py
+Date: 4.13.2020
+Author: Kyle Lanier
+
+Porpose:
+This is a Test Driven Development unittest file intended
+on testing functionality as defined within the pysqllite
+module.
+
+The pysqllite module is a custom pyhton wrapper for
+interactions with a SQLlite databasse. This module is
+the core module for this repository.
+
+"""
 from unittest import TestCase
 from modules.pysqllite import PySQLLite
 
