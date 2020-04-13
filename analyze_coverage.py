@@ -8,6 +8,10 @@ This file is an abstraction from the .github workflows pythonapp.yml
 and its purpose is to consolidate unittest as well as code coverage
 processes.
 
+This file can be executed directly in order to analyze coverage
+for new development prior to the submission of pull or
+merge requests.
+
 Process:
 First we import the necessary modules, then we use the coverage
 module to execute all unittests where in doing so statements
