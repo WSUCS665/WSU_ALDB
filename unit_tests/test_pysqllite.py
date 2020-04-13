@@ -72,7 +72,7 @@ class TestPySQLLite(TestCase):
         can read an entry from a database table
         """
         test_db = PySQLLite("database/WSU_AL.db")
-        
+
         # Fetch the data
         test_db.execute("""
             SELECT * FROM DemoTable
@@ -87,7 +87,7 @@ class TestPySQLLite(TestCase):
     def test_db_with_statement(self):
         """
         Test to ensure the PySQLLite module
-        will __enter__ and __exit__ when 
+        will __enter__ and __exit__ when
         used in a with statement
         """
         test_db = PySQLLite("database/WSU_AL.db")
