@@ -32,5 +32,10 @@ if __name__ == '__main__':
 
     print('\nExecuting Coverage Report\n')
     os.system('coverage report -m --omit=*\\__init__.py')
-    os.system(f"coverage-badge -o {os.path.join('documents', 'coverage.svg')} -f")
+    os.system(f"coverage-badge -o {os.path.join('resources', 'coverage.svg')} -f")
     os.system('coverage erase')
+
+    # print('\nExecuting Sphinx Document Generation\n')
+    # os.system('pip install sphinx')
+    # os.system(f"sphinx-apidoc -o {os.path.join('sphinx')} .")
+    # os.system(f"sphinx-build -b html {os.path.join('sphinx')} {os.path.join('sphinx', '_build')}")

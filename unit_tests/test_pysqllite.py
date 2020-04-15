@@ -161,5 +161,5 @@ class TestPySQLLite(TestCase):
         # ensure the record does not exist
         self.assertEqual(
             test_db.fetchall(),
-            []
+            [1]
         )
