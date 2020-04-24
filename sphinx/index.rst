@@ -6,11 +6,7 @@
 Welcome to Unit Converstion Tool's documentation!
 =================================================
 
-.. include:: ../modules/user_interface_docstring.py
-
-.. include:: ../modules/conversion_engine_docstring.py
-
-.. include:: ../modules/engines_docstring.py
+.. include:: ../modules/placeholder_module.py
 
 .. toctree::
    :maxdepth: 2
