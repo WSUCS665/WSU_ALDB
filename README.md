@@ -2,7 +2,7 @@
 WSU Applied Learning Database
 [![Run on Repl.it](https://repl.it/badge/github/WSUCS665/WSU_ALDB)](https://repl.it/github/WSUCS665/WSU_ALDB)
 ![Build Status](https://github.com/WSUCS665/WSU_ALDB/workflows/Python%20application/badge.svg?branch=dev)
-![Coverage](https://github.com/WSUCS665/WSU_ALDB/blob/dev/documents/coverage.svg)
+![Coverage](https://github.com/WSUCS665/WSU_ALDB/blob/dev/resources/coverage.svg)
 
 * This repository represents the Wichita State University Applied Learning database
 * This repository is front-ended by [Repl.it](https://WSUALDB.wsucs665.repl.run)
@@ -22,9 +22,9 @@ WSU Applied Learning Database
 ```javascript
 The Entity Relationship Diagram and details for this repository are as follows.
 ```
-![](./documents/ER_Diagram.png)
-![](./documents/Detailed_Description.png)
-![](./documents/Relational_Schemas.png)
+![](./resources/ER_Diagram.png)
+![](./resources/Detailed_Description.png)
+![](./resources/Relational_Schemas.png)
 
 
 ## ToDo
