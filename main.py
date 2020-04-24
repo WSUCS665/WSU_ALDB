@@ -13,7 +13,7 @@ while True:
     my_db.execute(statement)
 
     # Fetch the data
-    my_db.execute("SELECT * FROM DemoTable")
+    my_db.execute(statement)
 
     # Pretty print the fetched data
     pprint(my_db.fetchall())
