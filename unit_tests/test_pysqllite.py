@@ -13,6 +13,18 @@ interactions with a SQLlite databasse. This module is
 the core module for this repository.
 
 """
+import os
+import sys
+import pathlib  # noqa: F401
+from pathlib import Path  # for relative path discovery
+from unittest import TestCase
+
+# change sys.path
+# this allows us to import modules up one directory
+file = Path(__file__).resolve()
+parent, top = file.parent, file.parents[1]
+sys.path.append(os.path.join(top, ''))
+
 from unittest import TestCase
 from modules.pysqllite import PySQLLite
 
