@@ -32,7 +32,8 @@ sys.path.append(os.path.join(top, ''))
 
 # now import the unittest files from the higher directory
 from unit_tests.test_placeholder_module import TestPlaceholderModule  # noqa: F401
-from unit_tests.test_pysqllite import TestPySQLLite  # noqa: F401
+# from unit_tests.test_pysqllite import TestPySQLLite  # noqa: F401
+from unit_tests.test_db_setup import TestDbSetup  # noqa: F401
 
 
 main(exit=False)
