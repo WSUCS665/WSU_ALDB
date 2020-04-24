@@ -5,9 +5,9 @@ name: Python application
 
 on:
   push:
-    branches: [ dev, master ]
+    branches: [ strategy, dev, master ]
   pull_request:
-    branches: [ dev, master ]
+    branches: [ strategy, dev, master ]
 
 jobs:
   build:
@@ -33,4 +33,5 @@ jobs:
         flake8 . --count --max-complexity=10 --max-line-length=127 --statistics
     - name: Execute unittests and coverage report
       run: |
-       python analyze_coverage.py
+        pip install pytest
+        pytest ./unit_tests

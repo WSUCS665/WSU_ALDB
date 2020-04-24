@@ -8,10 +8,10 @@ from pprint import pprint
 while True:
     # Connect to a database
     my_db = PySQLLite("database/WSU_AL.db")
-    
+
     statement = input("Please enter a statement: ")
     my_db.execute(statement)
-    
+
     # Fetch the data
     my_db.execute("SELECT * FROM DemoTable")
 

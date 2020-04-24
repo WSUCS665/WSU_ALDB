@@ -1,0 +1,7 @@
+sphinx\_docgen module
+=====================
+
+.. automodule:: sphinx_docgen
+   :members:
+   :undoc-members:
+   :show-inheritance:
