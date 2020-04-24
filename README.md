@@ -16,6 +16,7 @@ WSU Applied Learning Database
 * [ToDo](#todo)
 * [Goals](#goals)
 * [Instructions](#instructions)
+* [CICD](#cicd)
 * [Troubleshooting](#troubleshooting)
 
 ## Documentation
@@ -42,11 +43,30 @@ The Entity Relationship Diagram and details for this repository are as follows.
 * What positions, and skills, do we need to train backfill to prepare for student graduation?
 ```
 
-## Instructions
+## Instalation
 ```javascript
-If you wish to download respository and execute main.py locally please install the following requirements
+First install python and pip because this program will automatically execute pip commands
+to install packages based on how you use this repository. After you download or cloan this 
+repository, use your commandline to change directory into the root folder and then do:
+> python main.py
 
 * Python3
+* pip
+```
+
+## CICD
+```javascript
+This repository follows test driven development practices. In order to self-validate unittests,
+and flake8 linting, in the root folder you can exectue (>python ./cicd/cicd_validation.py). 
+
+Flake8 linting, unittest validation, and code coverage will then be analyzed. Expect github
+to deny push/pull requests on protected branches if cicd_validation.py is not satisfied.
+
+To automatically update the sphinx documentation and upload the wiki to a hosting service,
+from within the root folder you can execute (>python ./cicd/sphinx_docgen.py).
+
+Note: to execute sphinx_docgen.py you will need to set your .env in the root directory and
+establish your own hosting service for the sphinx wiki.
 ```
 
 
