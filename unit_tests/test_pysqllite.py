@@ -25,8 +25,7 @@ file = Path(__file__).resolve()
 parent, top = file.parent, file.parents[1]
 sys.path.append(os.path.join(top, ''))
 
-from unittest import TestCase
-from modules.pysqllite import PySQLLite
+from modules.pysqllite import PySQLLite  # noqa: E402
 
 
 class TestPySQLLite(TestCase):
