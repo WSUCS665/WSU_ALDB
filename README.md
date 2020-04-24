@@ -15,8 +15,9 @@ WSU Applied Learning Database
 * [Documentation](#documentation)
 * [ToDo](#todo)
 * [Goals](#goals)
-* [Instructions](#instructions)
+* [Installation](#Installation)
 * [CICD](#cicd)
+* [Contribute](#contribute)
 * [Troubleshooting](#troubleshooting)
 
 ## Documentation
@@ -43,7 +44,7 @@ The Entity Relationship Diagram and details for this repository are as follows.
 * What positions, and skills, do we need to train backfill to prepare for student graduation?
 ```
 
-## Instalation
+## Installation
 ```javascript
 First install python and pip because this program will automatically execute pip commands
 to install packages based on how you use this repository. After you download or cloan this 
@@ -69,13 +70,27 @@ Note: to execute sphinx_docgen.py you will need to set your .env in the root dir
 establish your own hosting service for the sphinx wiki.
 ```
 
+## CONTRIBUTE
+```javascript
+This repository follows test driven development practices and the steps below define
+the process to contribute future enhancements.
+
+1: Clone the dev branch to your local workstation and change directory into the root folder
+
+2: From the commandline create a new branch, examples include:
+   git checkout -b feat/my_feature
+   git checkout -b bug/some_bug
+   git checkout -b wip/some_workinprogress
+
+3: Pre validate your code by executing /cicd/cicd_valaidation.py
+```
 
 ## Troubleshooting
 ```javascript
-All unittest files located in the unit_tests directory can be debugged using test_suite.py
+All unittest files located in the unit_tests directory can be debugged using /cicd/test_suite.py
 
 Set your breakpoints anywhere in a unittest file located withn the unit_tests directory.
-Then execute the test_suite.py file in debug mode (Visual Studio Code) to enter and step
+Then execute the /cicd/test_suite.py file using debug mode (Visual Studio Code) to enter and step
 into your breakpoints. For each new unittest file that is added into the unit_tests
 directory, be sure to add the respective import within test_suite.py
 ```
